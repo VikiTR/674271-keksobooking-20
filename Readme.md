@@ -1,7 +1,7 @@
 # Личный проект «Кексобукинг» [![Build status][travis-image]][travis-url]
 
 * Студент: [Виктория Трошкина](https://up.htmlacademy.ru/javascript/20/user/674271).
-* Наставник: `Неизвестно`.
+* Наставник: [Евгений Фаллер] (https://github.com/fallereugene).
 
 ---
 
