@@ -9,10 +9,30 @@ var getRandomInt = function (min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 };
 
-var typesRoom = ['palace', 'flat', 'house', 'bungalo'];
-var checkTimes = ['12:00', '13:00', '14:00'];
-var features = ['wifi', 'dishwasher', 'parking', 'washer', 'elevator', 'conditioner'];
-var photosUrl = ['http://o0.github.io/assets/images/tokyo/hotel1.jpg', 'http://o0.github.io/assets/images/tokyo/hotel2.jpg', 'http://o0.github.io/assets/images/tokyo/hotel3.jpg'];
+var TYPES_ROOM = [
+  'palace',
+  'flat',
+  'house',
+  'bungalo'
+];
+var CHECK_TIMES = [
+  '12:00',
+  '13:00',
+  '14:00'
+];
+var FEATURES = [
+  'wifi',
+  'dishwasher',
+  'parking',
+  'washer',
+  'elevator',
+  'conditioner'
+];
+var PHOTOS_URL = [
+  'http://o0.github.io/assets/images/tokyo/hotel1.jpg',
+  'http://o0.github.io/assets/images/tokyo/hotel2.jpg',
+  'http://o0.github.io/assets/images/tokyo/hotel3.jpg'
+];
 
 var shuffleArray = function (a) {
   var j;
@@ -37,14 +57,14 @@ var addPlace = function () {
         'title': 'Жилье',
         'address': getRandomInt(1, 600) + ', ' + getRandomInt(1, 350),
         'price': getRandomInt(1, 15000),
-        'type': typesRoom[getRandomInt(0, typesRoom.length - 1)],
+        'type': TYPES_ROOM[getRandomInt(0, TYPES_ROOM.length - 1)],
         'rooms': getRandomInt(1, 5),
         'guests': getRandomInt(1, 10),
-        'checkin': checkTimes[getRandomInt(0, checkTimes.length - 1)],
-        'checkout': checkTimes[getRandomInt(0, checkTimes.length - 1)],
-        'features': shuffleArray(features).slice(0, getRandomInt(0, features.length)),
+        'checkin': CHECK_TIMES[getRandomInt(0, CHECK_TIMES.length - 1)],
+        'checkout': CHECK_TIMES[getRandomInt(0, CHECK_TIMES.length - 1)],
+        'features': shuffleArray(FEATURES).slice(0, getRandomInt(0, FEATURES.length)),
         'description': 'Описание',
-        'photos': photosUrl[getRandomInt(0, photosUrl.length - 1)]
+        'photos': PHOTOS_URL[getRandomInt(0, PHOTOS_URL.length - 1)]
       },
       'location': {
         'x': getRandomInt(0, 1200),
